@@ -31,8 +31,8 @@ int bin_tree_is_full(const binary_tree_t *tree)
 		children += 1;
 	if (children == 1)
 		return (0);
-	r_left = binary_tree_is_full(tree->left);
-	r_right = binary_tree_is_full(tree->right);
+	r_left = bin_tree_is_full(tree->left);
+	r_right = bin_tree_is_full(tree->right);
 	if (r_left == 0 || r_right == 0)
 		return (0);
 	return (1);
