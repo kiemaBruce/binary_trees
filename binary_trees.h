@@ -45,5 +45,7 @@ size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
 int bin_tree_balance(const binary_tree_t *tree, int h_diff, int balance_f);
 int absolute_val(int x);
+int binary_tree_is_full(const binary_tree_t *tree);
+int bin_tree_is_full(const binary_tree_t *tree);
 
 #endif /* binary_trees_h */
