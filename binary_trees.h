@@ -53,5 +53,6 @@ int last_leaf_level);
 int leaf_level_checker(const binary_tree_t *tree, int level,
 int last_leaf_level);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 #endif /* binary_trees_h */
