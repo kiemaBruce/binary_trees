@@ -47,5 +47,10 @@ int bin_tree_balance(const binary_tree_t *tree, int h_diff, int balance_f);
 int absolute_val(int x);
 int binary_tree_is_full(const binary_tree_t *tree);
 int bin_tree_is_full(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
+int bin_tree_is_perfect(const binary_tree_t *tree, int level,
+int last_leaf_level);
+int leaf_level_checker(const binary_tree_t *tree, int level,
+int last_leaf_level);
 
 #endif /* binary_trees_h */
