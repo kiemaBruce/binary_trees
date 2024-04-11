@@ -83,9 +83,9 @@ const binary_tree_t *second, size_t first_depth, size_t second_depth)
 			second_depth -= 1;
 		}
 	}
-	/*At least one is a root node, meaning they can't have common ancestor*/
-	if (first->parent == NULL || second->parent == NULL)
-		return (NULL);
+	/* One of the 2 children is the lowest common ancestor */
+	if (first == second)
+		return ((binary_tree_t *)first);
 	while (1)
 	{
 		if (first->parent != NULL)
