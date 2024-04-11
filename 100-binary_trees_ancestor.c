@@ -31,7 +31,7 @@ const binary_tree_t *second)
 	}
 	/*Same node, can't have common ancestor.*/
 	if (first == second)
-		return (NULL);
+		return (first);
 	while (1)
 	{
 		if (first == second) /*same parent*/
