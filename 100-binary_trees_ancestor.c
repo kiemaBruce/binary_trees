@@ -16,6 +16,8 @@ const binary_tree_t *second)
 
 	if (first == NULL || second == NULL)
 		return (NULL);
+	if (check_root(first, second) == 0)
+		return (NULL);
 	first_depth = binary_tree_depth(first);
 	second_depth = binary_tree_depth(second);
 	if (first_depth != second_depth)
@@ -112,4 +114,33 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 	if (tree->parent == NULL)
 		return (0);
 	return (1 + binary_tree_depth(tree->parent));
+}
+/**
+ * check_root - determines whether two nodes are on same binary tree.
+ * @first: pointer to the first node to check.
+ * @second: pointer to the second node to check.
+ * Description: the function checks the roots of the two nodes to determine
+ * whether they are on the same binary tree.
+ * Return: 1 if they are on the same tree, and 0 if they aren't. Returns 0 if
+ * either first or second is NULL.
+ */
+int check_root(const binary_tree_t *first, const binary_tree_t *second)
+{
+	if (first == NULL || second == NULL)
+		return (0);
+	while (1)
+	{
+		if (first->parent == NULL)
+			break;
+		first = first->parent;
+	}
+	while (1)
+	{
+		if (second->parent == NULL)
+			break;
+		second = second->parent;
+	}
+	if (first == second)
+		return (1);
+	return (0);
 }

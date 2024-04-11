@@ -58,5 +58,6 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second);
 binary_tree_t *binary_trees_ancestor_helper(const binary_tree_t *first,
 const binary_tree_t *second, size_t first_depth, size_t second_depth);
+int check_root(const binary_tree_t *first, const binary_tree_t *second);
 
 #endif /* binary_trees_h */
